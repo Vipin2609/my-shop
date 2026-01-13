@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NextGen Store</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <nav>
+        <div class="nav-container">
+            <div class="logo">NextGen<span>Store</span>.</div>
+            <div class="nav-icons">
+                <div class="cart-icon" onclick="toggleCart()">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span id="cart-count">0</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Premium Tech & Lifestyle</h1>
+            <p>Upgrade your daily essentials with our curated collection.</p>
+            <button class="cta-btn" onclick="document.getElementById('product-list').scrollIntoView({behavior: 'smooth'})">Shop Now</button>
+        </div>
+    </header>
+
+    <div class="container">
+        <h2 class="section-title">Featured Products</h2>
+        <main id="product-list" class="grid-container">
+            </main>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 NextGen Store. All rights reserved.</p>
+    </footer>
+
+    <div id="cart-modal" class="cart-overlay hidden">
+        <div class="cart-sidebar">
+            <div class="cart-header">
+                <h2>Your Cart</h2>
+                <span class="close-btn" onclick="toggleCart()">&times;</span>
+            </div>
+            
+            <div id="cart-items" class="cart-body">
+                <p class="empty-msg">Your cart is empty.</p>
+            </div>
+
+            <div class="cart-footer">
+                <div class="total-row">
+                    <span>Total</span>
+                    <span id="total-price">$0.00</span>
+                </div>
+                <button id="checkout-btn" onclick="checkout()">Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
